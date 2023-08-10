@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css'
 function SignUp() {
   document.title = 'SIGN UP // COMING SOON'
 
+  // Animation code
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { duration: 2.5, ease: 'expo.out' } })
     tl.fromTo(

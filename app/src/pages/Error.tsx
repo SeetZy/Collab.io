@@ -16,8 +16,7 @@ import errorSvg from '../assets/error.svg'
 function ErrorPage() {
   document.title = '404 NOT FOUND // COMING SOON'
 
-  const [isLoaded, setIsLoaded] = useState(false)
-
+  // Animation code
   useEffect(() => {
     const tl = gsap.timeline({ default: { duration: 2.5, ease: 'expo.out' } })
     tl.fromTo(
@@ -26,6 +25,8 @@ function ErrorPage() {
       { y: 0, opacity: 1, duration: 0.8 },
     )
   }, [])
+
+  const [isLoaded, setIsLoaded] = useState(false)
 
   return (
     <>

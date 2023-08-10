@@ -14,6 +14,7 @@ import { ToastContainer, toast } from 'react-toastify'
 function SignIn() {
   document.title = 'SIGN IN // COMING SOON'
 
+  // Animation code
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { duration: 2.5, ease: 'expo.out' } })
     tl.fromTo(
