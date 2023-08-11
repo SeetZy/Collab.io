@@ -20,7 +20,7 @@ function ProfileSidebar() {
   // Generates avatar
   const avatar = useMemo(() => {
     return createAvatar(notionists, {
-      seed: 'hfhjfhgd',
+      seed: 'dasvgheh',
       backgroundColor: ['c0aede'],
       size: 256,
     }).toDataUriSync()

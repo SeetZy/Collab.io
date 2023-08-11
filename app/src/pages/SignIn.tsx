@@ -62,7 +62,7 @@ function SignIn() {
             <Form.Label>Username</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter username"
+              placeholder="Enter Username"
               name="username"
               required
             />
@@ -72,7 +72,7 @@ function SignIn() {
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
-              placeholder="Password"
+              placeholder="Enter Password"
               name="password"
               required
             />

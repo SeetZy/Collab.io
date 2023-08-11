@@ -5,6 +5,11 @@ import { useEffect } from 'react'
 // ? https://www.npmjs.com/package/gsap
 import { gsap } from 'gsap'
 
+/**
+ * * Component imports
+ */
+import ProfileActivityCard from './ProfileActivityCard'
+
 function ProfileActivity() {
   // Animations
   useEffect(() => {
@@ -24,7 +29,7 @@ function ProfileActivity() {
       <div className="w-full h-full">
         <div className="mt-[2%] ml-[5%] mr-[5%] mb-5">
           <p className="text-3xl font-bold">User Information:</p>
-          <div className="flex flex-wrap justify-start">
+          <div className="flex flex-wrap justify-start text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec
             arcu euismod, gravida libero non, suscipit nisl. Quisque mollis
             purus id nibh dapibus, id venenatis est dignissim. Nam a libero eu
@@ -47,9 +52,12 @@ function ProfileActivity() {
             mattis posuere orci tempus a.
           </div>
         </div>
-        <div className="mt-[2%] ml-[5%] mr-[5%] mb-5">
+        <div className="mt-[2%] ml-[5%] mr-[5%] mb-2">
           <p className="text-3xl font-bold">User Activity:</p>
-          <div className="flex flex-wrap justify-start"></div>
+          <div className="flex flex-wrap justify-center">
+            <ProfileActivityCard />
+            <ProfileActivityCard />
+          </div>
         </div>
       </div>
     </div>
