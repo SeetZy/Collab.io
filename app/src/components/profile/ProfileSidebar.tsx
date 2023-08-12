@@ -1,31 +1,19 @@
 /**
  * * Library imports
  */
-import { useMemo, useEffect, useState } from 'react'
-// ? https://www.npmjs.com/package/@dicebear/avatars
-// ? https://www.dicebear.com/how-to-use/js-library
-import { createAvatar } from '@dicebear/core'
-import { notionists } from '@dicebear/collection'
+import { useEffect } from 'react'
+// ? https://www.npmjs.com/package/react-bootstrap
+import { Button } from 'react-bootstrap'
 // ? https://www.npmjs.com/package/gsap
 import { gsap } from 'gsap'
 
 /**
  * * Component imports
  */
-import LoadingBar from '../LoadingBar'
+import Avatar from '../Avatar'
+import Tag from '../Tag'
 
 function ProfileSidebar() {
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  // Generates avatar
-  const avatar = useMemo(() => {
-    return createAvatar(notionists, {
-      seed: 'dasvgheh',
-      backgroundColor: ['c0aede'],
-      size: 256,
-    }).toDataUriSync()
-  }, [])
-
   // Animations
   useEffect(() => {
     const tl = gsap.timeline({ default: { duration: 2.5, ease: 'expo.out' } })
@@ -37,62 +25,51 @@ function ProfileSidebar() {
   }, [])
 
   return (
-    <>
-      {!isLoaded && (
-        <div className="loading-screen fixed top-0 left-0 w-full h-full flex justify-center items-center z-40 bg-bg-svg bg-cover bg-no-repeat">
-          <LoadingBar />
-        </div>
-      )}
-      <div
-        className="w-[100%] h-[95%] m-3 mt-4 bg-gray-100 rounded-2xl pt-3 pb-3 border-2 border-black"
-        id="sidebar"
-      >
-        <div className="mt-[8%] ml-[10%]">
-          <img
-            src={avatar}
-            alt="Avatar"
-            className="border-2 border-black rounded-[50%]"
-            width="70%"
-            onLoad={() => setIsLoaded(true)}
-          />
-        </div>
-        <ul className="mt-[9%] mb-[9%] mr-[10%]">
-          <li>
-            <div className="text-lg">Username: Tester</div>
-          </li>
-          <li>
-            <div className="text-base">Joined: 07.08.2023</div>
-          </li>
-          <li>
-            <div className="text-base">Github: random link</div>
-          </li>
-          <br />
-          <li className="font-bold">Tags:</li>
-          <li>
-            <div className="flex flex-wrap  ">
-              <div className="bg-gray-600 pr-3 pl-3 m-1 text-white rounded-lg text-center">
-                DevOps
-              </div>
-              <div className="bg-gray-600 pr-3 pl-3 m-1 text-white rounded-lg text-center">
-                Frontend
-              </div>
-              <div className="bg-gray-600 pr-3 pl-3 m-1 text-white rounded-lg text-center">
-                Backend
-              </div>
-              <div className="bg-gray-600 pr-3 pl-3 m-1 text-white rounded-lg text-center">
-                Databases
-              </div>
-              <div className="bg-gray-600 pr-3 pl-3 m-1 text-white rounded-lg text-center">
-                IoT
-              </div>
-              <div className="bg-gray-600 pr-3 pl-3 m-1 text-white rounded-lg text-center">
-                3D modeling
-              </div>
-            </div>
-          </li>
-        </ul>
+    <div
+      className="w-[100%] h-[95%] m-3 mt-4 bg-gray-100 rounded-2xl pt-3 pb-3 border-2 border-black"
+      id="sidebar"
+    >
+      {/* Profile Avatar */}
+      <div className="mt-[8%] ml-[10%] mr-[10%] max-xl:justify-center flex">
+        <Avatar seed="dasvgheh" width={250} />
       </div>
-    </>
+
+      {/* Profile Editing Button */}
+      <Button
+        variant="dark"
+        type="submit"
+        className="ml-[9%] min-[1023px]:ml-[16%] min-[1293px]:ml-[10%] mt-[3%]"
+      >
+        Edit Profile
+      </Button>
+
+      <ul className="mt-[3%] mb-[9%] mr-[10%]">
+        {/* User Information */}
+        <li>
+          <div className="text-lg">Username: Tester</div>
+        </li>
+        <li>
+          <div className="text-base">Joined: 07.08.2023</div>
+        </li>
+        <li>
+          <div className="text-base">Github: random link</div>
+        </li>
+        <br />
+
+        {/* User Tags */}
+        <li>
+          <h5 className="font-bold">Tags:</h5>
+          <ul className="flex flex-wrap -mx-8 mr-2">
+            <Tag text="DevOps" />
+            <Tag text="Frontend" />
+            <Tag text="Backend" />
+            <Tag text="Databases" />
+            <Tag text="IoT" />
+            <Tag text="3D modeling" />
+          </ul>
+        </li>
+      </ul>
+    </div>
   )
 }
 
