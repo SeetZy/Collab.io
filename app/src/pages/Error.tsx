@@ -14,7 +14,7 @@ import LoadingBar from '../components/LoadingBar'
 import errorSvg from '../assets/error.svg'
 
 function ErrorPage() {
-  document.title = '404 NOT FOUND // COMING SOON'
+  document.title = '404 NOT FOUND // COLLAB.IO'
 
   // Animation code
   useEffect(() => {

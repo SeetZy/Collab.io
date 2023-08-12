@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom'
 import { gsap } from 'gsap'
 
 function EmailConfirmationPage() {
-  document.title = 'EMAIL CONFIRMATION // COMING SOON'
+  document.title = 'EMAIL CONFIRMATION // COLLAB.IO'
 
   // Animation code
   useEffect(() => {

@@ -13,7 +13,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function SignUp() {
-  document.title = 'SIGN UP // COMING SOON'
+  document.title = 'SIGN UP // COLLAB.IO'
 
   // Animation code
   useEffect(() => {
@@ -50,18 +50,18 @@ function SignUp() {
   }
 
   return (
-    <div className="w-full h-screen flex justify-center items-center 2xl:h-[80vh]">
+    <div className="w-full h-auto flex justify-center items-center 2xl:h-[80vh]">
       <div
-        className="border-2 border-black bg-white rounded-md p-4 w-[70%] xl:w-[40%]"
+        className="border-2 border-black bg-white rounded-md p-4 w-[70%] xl:w-[40%] mt-[10%] mb-[10%] max-sm:mt-[40%] max-sm:mb-[30%]"
         id="form"
       >
         <h1 className="py-2 text-2xl font-extrabold font-Roboto tracking-wider flex items-center text-black text-center">
-          Coming Soon
-          <i className="fa-solid fa-hashtag text-blue-700 text-3xl ml-2 mt-1"></i>
+          Collab.<span className="text-blue-400">io</span>
         </h1>
         <Form onSubmit={handleSignUp}>
           <Row>
             <Col>
+              {/* Username Field */}
               <Form.Group className="mb-3 text-white-500" controlId="username">
                 <Form.Label>Username</Form.Label>
                 <Form.Control
@@ -72,6 +72,7 @@ function SignUp() {
                 />
               </Form.Group>
 
+              {/* Email Field */}
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email Address</Form.Label>
                 <Form.Control
@@ -84,6 +85,7 @@ function SignUp() {
             </Col>
 
             <Col>
+              {/* Password Field */}
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
@@ -94,6 +96,7 @@ function SignUp() {
                 />
               </Form.Group>
 
+              {/* Repeat Password Field */}
               <Form.Group className="mb-3" controlId="formBasicPasswordRepeat">
                 <Form.Label>Repeat Password</Form.Label>
                 <Form.Control
@@ -107,6 +110,7 @@ function SignUp() {
           </Row>
           <div className="flex justify-end">
             <Col>
+              {/* Sign In Button */}
               <Button
                 className="w-[80px] xl:w-2/3"
                 variant="dark"
@@ -115,6 +119,8 @@ function SignUp() {
                 Sign up
               </Button>
             </Col>
+
+            {/* Sign In Link */}
             <Col className="flex justify-end">
               <Link to="/sign-in" className="no-underline">
                 Already have an account?

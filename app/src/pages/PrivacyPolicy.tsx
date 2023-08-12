@@ -1,5 +1,5 @@
 function PrivacyPolicyPage() {
-  document.title = 'Privacy Policy // COMING SOON'
+  document.title = 'Privacy Policy // COLLAB.IO'
 
   return (
     <section className="w-screen h-screen flex justify-center items-center">

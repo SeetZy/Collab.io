@@ -24,8 +24,9 @@ function Navigation() {
             data-bs-target="#navbarScroll"
           />
           <Navbar.Brand href="/" className="flex items-center">
-            <h3 className="text-white font-bold mr-2 mt-1">ComingSoon</h3>
-            <i className="fa-solid fa-hashtag text-blue-700 text-3xl mb-1"></i>
+            <h3 className="text-white font-bold mr-2 mt-1">
+              Collab.<span className="text-blue-400">io</span>
+            </h3>
           </Navbar.Brand>
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto">

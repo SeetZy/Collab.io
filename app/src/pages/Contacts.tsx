@@ -1,5 +1,5 @@
 function ContactsPage() {
-  document.title = 'CONTACTS // COMING SOON'
+  document.title = 'CONTACTS // COLLAB.IO'
 
   return (
     <section className="w-screen h-screen flex justify-center items-center">

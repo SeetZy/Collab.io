@@ -5,7 +5,7 @@ import TeamsList from '../components/teams/TeamsList'
 import TeamsSidebar from '../components/teams/TeamsSidebar'
 
 function Profile() {
-  document.title = 'TEAMS // COMING SOON'
+  document.title = 'TEAMS // COLLAB.IO'
 
   return (
     <section className="w-full h-auto min-h-screen flex justify-center items-center">

@@ -9,7 +9,7 @@ function ProfileActivityCard() {
     <div className="w-[95%] bg-white rounded-xl h-auto border-black border-2 m-2">
       <div className="m-2">
         {/* Team Name */}
-        <h4 className="font-bold mb-4">Team name: Something</h4>
+        <h3 className="font-bold mb-4">Something</h3>
 
         {/* Team Description */}
         <div>
