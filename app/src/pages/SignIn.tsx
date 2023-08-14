@@ -10,6 +10,7 @@ import { Row, Button, Form } from 'react-bootstrap'
 import { gsap } from 'gsap'
 // ? https://www.npmjs.com/package/react-toastify
 import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function SignIn() {
   document.title = 'SIGN IN // COLLAB.IO'
