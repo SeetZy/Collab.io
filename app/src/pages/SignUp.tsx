@@ -50,7 +50,7 @@ function SignUp() {
   }
 
   return (
-    <div className="w-full h-auto flex justify-center items-center 2xl:h-[80vh]">
+    <div className="w-full h-full flex justify-center items-center 2xl:h-[80vh]">
       <div
         className="border-2 border-black bg-white rounded-md p-4 w-[70%] xl:w-[40%] mt-[10%] mb-[10%] max-sm:mt-[40%] max-sm:mb-[30%]"
         id="form"
